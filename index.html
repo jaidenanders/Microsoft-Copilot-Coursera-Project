@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | Software Engineer & Web Developer</title>
+  <meta name="description" content="Professional portfolio of a software engineer featuring full-stack web applications, technical skill proficiencies, and contact information." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Semantic Header with Accessible Navigation -->
+  <header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <a href="#about-me">Portfolio</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- About Me Section -->
+    <section id="about-me" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I am a software developer focused on building robust web applications, automated workflows, and accessible user interfaces. I enjoy solving complex systems problems, writing maintainable code, and turning designs into accessible digital experiences.
+      </p>
+    </section>
+
+    <!-- Projects Section with Filter & Semantic Articles -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Featured Projects</h2>
+
+      <div class="project-filters" role="group" aria-label="Filter projects by category">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="backend">Backend &amp; CI/CD</button>
+        <button type="button" class="filter-btn" data-filter="frontend">Frontend &amp; Full-Stack</button>
+      </div>
+      
+      <div class="projects-grid">
+        <article class="project-card" data-category="backend">
+          <figure>
+            <img 
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80" 
+              alt="Screenshot of an automated CI/CD pipeline dashboard showing passing build checks and deployment stages" 
+              width="600" 
+              height="350" 
+            />
+            <figcaption>Automated CI/CD Pipeline Dashboard</figcaption>
+          </figure>
+          <h3>Automated Build &amp; Deployment Pipeline</h3>
+          <p>
+            An automated continuous integration and delivery pipeline configuring automated linting, test suites, and containerized deployments across multi-stage environments.
+          </p>
+          <a href="#" class="btn" aria-label="View Automated Build and Deployment Pipeline project repository">View Source</a>
+        </article>
+
+        <article class="project-card" data-category="frontend">
+          <figure>
+            <img 
+              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80" 
+              alt="Laptop screen displaying an interactive web dashboard with real-time responsive analytics" 
+              width="600" 
+              height="350" 
+            />
+            <figcaption>Full-Stack Application Dashboard</figcaption>
+          </figure>
+          <h3>Interactive Web Portal</h3>
+          <p>
+            A responsive web application with structured component architecture, dynamic state management, and real-time client-server synchronization.
+          </p>
+          <a href="#" class="btn" aria-label="View Interactive Web Portal project repository">View Source</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 &amp; Semantic Markup</li>
+        <li>CSS3, Flexbox &amp; Grid</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git &amp; GitHub Workflows</li>
+        <li>Python</li>
+        <li>RESTful APIs</li>
+        <li>CI/CD Automation</li>
+        <li>Accessibility (WCAG &amp; ARIA)</li>
+      </ul>
+    </section>
+
+    <!-- Accessible Contact Form -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Get in Touch</h2>
+      <form action="#" method="post" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+          <input 
+            type="text" 
+            id="full-name" 
+            name="full-name" 
+            required 
+            aria-required="true" 
+            autocomplete="name" 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email-address">Email Address <span aria-hidden="true">*</span></label>
+          <input 
+            type="email" 
+            id="email-address" 
+            name="email-address" 
+            required 
+            aria-required="true" 
+            autocomplete="email" 
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required 
+            aria-required="true"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
